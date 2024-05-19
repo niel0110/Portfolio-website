@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience</title>
+    <title>Niel Patrick Israel | Portfolio</title>
     <link rel="icon" type="image/png" href="images/3.png">
     <style>
         body {
@@ -64,7 +64,7 @@
             border-radius: 10px;
             text-align: center;
             margin-top: 50px;
-            width: 100%;
+            box-sizing: border-box;
         }
 
         .project-item {
@@ -75,7 +75,6 @@
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 100%;
             box-sizing: border-box;
         }
 
@@ -92,7 +91,6 @@
             text-align: left;
             transition: transform 0.3s ease-in-out;
             cursor: pointer;
-            width: 100%;
             box-sizing: border-box;
         }
 
@@ -115,12 +113,13 @@
         }
 
         .project-img img {
-            width: 70%;
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 30px;
             border-bottom: 1px solid #ccc;
             border-radius: 10px;
             transition: transform 0.3s ease;
+            box-sizing: border-box;
         }
 
         .project-img img:hover {
@@ -145,6 +144,7 @@
         @media screen and (max-width: 768px) {
             .container {
                 padding: 10px;
+                width: 100%;
             }
 
             .menu-icon {
