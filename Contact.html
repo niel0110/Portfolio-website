@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Niel Patrick Israel | Portfolio</title>
     <link rel="icon" type="image/png" href="images/3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -24,7 +25,7 @@
         }
 
         nav {
-            font-family: 'Montserrat', sans-serif; 
+            font-family: 'Montserrat', sans-serif;
             margin-top: 20px;
             font-weight: bold;
             font-size: large;
@@ -52,7 +53,7 @@
         }
 
         .contact-container {
-            max-width: 800px;
+            max-width: 500px;
             margin: 50px auto;
             padding: 20px;
             border-radius: 10px;
@@ -61,23 +62,49 @@
         }
 
         .bullet-container {
+            display: flex;
+            align-items: flex-start;
             margin-bottom: 20px;
             padding: 15px;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .bullet-container:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .bullet-container img {
+            margin-right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .bullet-container .content {
+            flex-grow: 1;
         }
 
         .bullet-container h3 {
-            margin-top: 0;
+            margin: 0 0 10px 0;
+            text-align: left;
         }
 
         .bullet-container ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         .bullet-container ul li {
+            display: flex;
+            align-items: center;
             margin-bottom: 5px;
+        }
+
+        .bullet-container ul li i {
+            margin-right: 10px;
+            color: #84DCE0;
         }
 
         .feedback-container {
@@ -91,24 +118,27 @@
             margin-top: 0;
         }
 
-        .feedback-container input[type="text"] {
-            width: 99%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+        .feedback-container .input-container {
             margin-bottom: 10px;
-            margin-left: -10px;
-            background-color: rgba(255, 255, 255, 0.7);
-            color: #333;
         }
-        .feedback-container input[type="submit"] {
-            width:99%;
+
+        .feedback-container input[type="text"],
+        .feedback-container input[type="submit"],
+        .feedback-container textarea {
+            width: calc(100% - 20px);
             padding: 10px;
-            border-radius: 5px;
+            border-radius: 50px; /* Changed from 5px to 50px */
             border: 1px solid #ccc;
-            margin-bottom: 10px;
+            margin: 0 10px;
             background-color: rgba(255, 255, 255, 0.7);
             color: #333;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .feedback-container input[type="text"]:hover,
+        .feedback-container textarea:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-color: #84DCE0;
         }
 
         .feedback-container input[type="submit"] {
@@ -116,11 +146,16 @@
             border: none;
             color: #fff;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .feedback-container input[type="submit"]:hover {
             background-color: #5cb8b2;
+            transform: scale(1.05);
+        }
+
+        .input-container {
+            width: calc(100% - 20px);
         }
 
         .menu-icon {
@@ -193,25 +228,34 @@
     <div class="contact-container">
         <h2>CONTACT US</h2>
         <div class="bullet-container">
-            <h3>EMAIL:</h3>
-            <ul>
-                <li>info@example.com</li>
-                <li>support@example.com</li>
-            </ul>
+            <img src="images/email-logo.png" alt="Email Icon">
+            <div class="content">
+                <h3>EMAIL:</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i>israelnielpatrick@gmail.com</li>
+                    <li><i class="fas fa-envelope"></i>npsisrael0144@usep.edu.ph</li>
+                </ul>
+            </div>
         </div>
         <div class="bullet-container">
-            <h3>CONTACT NUMBER:</h3>
-            <ul>
-                <li>+1234567890</li>
-                <li>+0987654321</li>
-            </ul>
+            <img src="images/phone-logo.png" alt="Phone Icon">
+            <div class="content">
+                <h3>CONTACT NUMBER:</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i>+639120268265</li>
+                    <li><i class="fas fa-phone"></i>+639453348694</li>
+                </ul>
+            </div>
         </div>
         <div class="bullet-container">
-            <h3>ADDRESS:</h3>
-            <ul>
-                <li>123 Main Street</li>
-                <li>City, Country</li>
-            </ul>
+            <img src="images/address-logo.png" alt="Address Icon">
+            <div class="content">
+                <h3>ADDRESS:</h3>
+                <ul>    
+                    <li><i class="fas fa-map-marker-alt"></i>Purok 7, Poblacion, New Corella</li>
+                    <li><i class="fas fa-map-marker-alt"></i>Tagum, Davao del Norte, Philippines</li>
+                </ul>
+            </div>
         </div>
 
         <div class="feedback-container">
